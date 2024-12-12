@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+
+  background: rgb(229, 229, 229);
+}
+
+.container {
+  max-width: calc(1440px - 2 * 116px);
+  margin: 0 auto;
+}
+
+.dark * {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+main {
+  margin: 72px 0 0 0;
+  min-height: 100vh;
+  // z-index: ;
+}
+
+.dark-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 300px;
+  border-radius: 50%;
+  background-color: #70c05b;
+
+  img {
+    color: #70c05b;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.backtop {
+  position: fixed;
+  bottom: 300px;
+  left: 20px;
+  background-color: #70c05b;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(252, 213, 186, 0.8);
+  inset: 0;
+  position: fixed;
+  opacity: 0;
+  z-index: -1;
+  transition: 1s;
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    // width: 420px;
+    // height: 430px;
+    box-shadow: 8px 16px 32px 0px rgba(255, 102, 51, 0.2);
+    background: rgb(255, 255, 255);
+    position: relative;
+    h2 {
+      /* Desc/Header/S */
+      color: rgb(65, 65, 65);
+      font-family: Rubik;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+    i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 30px;
+      padding: 0 5px;
+    }
+
+    form {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-direction: column;
+      gap: 10px;
+      label {
+        text-align: start !important;
+      }
+      input {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.modal-show {
+  opacity: 1;
+  z-index: 1;
+}

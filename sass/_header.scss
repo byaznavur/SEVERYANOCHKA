@@ -1,0 +1,384 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  /* Default/S */
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  /* /surface */
+  background: rgb(255, 255, 255);
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    .logo {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: rgb(65, 65, 65);
+      font-family: Rubik;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 80%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-decoration: none;
+    }
+    .catalog {
+      border-radius: 4px;
+      background: rgb(112, 192, 91);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      i {
+        position: static;
+        width: 24px;
+        height: 24px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      a {
+        /* Desc/Text/S */
+        color: rgb(255, 255, 255);
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .form-search {
+      display: flex;
+      align-items: center;
+      width: 375px;
+      .search-input {
+        box-sizing: border-box;
+        border: 1px solid rgb(112, 192, 91);
+        border-radius: 4px;
+        background: rgb(255, 255, 255);
+        color: rgb(143, 143, 143);
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+      }
+      i {
+        margin-left: -25px;
+      }
+    }
+    .list-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          /* Desc/Text/XS */
+          color: rgb(65, 65, 65);
+          font-family: Rubik;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: center;
+        }
+      }
+    }
+    .login-person {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+      p {
+        /* Desc/Text/S */
+        color: rgb(35, 35, 35);
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+        margin: 0;
+      }
+    }
+
+    .nav-bottom {
+      display: none;
+    }
+  }
+}
+
+@media screen and ((min-width: 768px)  and (max-width: 1200px)) {
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* Default/S */
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    /* /surface */
+    background: rgb(255, 255, 255);
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+
+      .logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: rgb(65, 65, 65);
+        font-family: Rubik;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 80%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-decoration: none;
+
+        span {
+          display: none;
+        }
+      }
+      .catalog {
+        border-radius: 4px;
+        background: rgb(112, 192, 91);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        i {
+          position: static;
+          width: 24px;
+          height: 24px;
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+          color: #fff;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        a {
+          display: none;
+          /* Desc/Text/S */
+          color: rgb(255, 255, 255);
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .form-search {
+        display: flex;
+        align-items: center;
+        width: 325px;
+        .search-input {
+          box-sizing: border-box;
+          border: 1px solid rgb(112, 192, 91);
+          border-radius: 4px;
+          background: rgb(255, 255, 255);
+          color: rgb(143, 143, 143);
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+          padding: 10px;
+          width: 100%;
+        }
+        i {
+          margin-left: -25px;
+        }
+      }
+      .list-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            /* Desc/Text/XS */
+            color: rgb(65, 65, 65);
+            font-family: Rubik;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: center;
+          }
+        }
+      }
+      .login-person {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        text-decoration: none;
+        cursor: pointer;
+        p {
+          /* Desc/Text/S */
+          display: none;
+          color: rgb(35, 35, 35);
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+          margin: 0;
+        }
+      }
+      .nav-bottom {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* Default/S */
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    /* /surface */
+    background: rgb(255, 255, 255);
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      position: relative;
+
+      .logo {
+        span {
+          display: none;
+        }
+      }
+      .catalog {
+        display: none;
+      }
+      .form-search {
+        display: flex;
+        align-items: center;
+        width: 261px;
+        .search-input {
+          box-sizing: border-box;
+          border: 1px solid rgb(112, 192, 91);
+          border-radius: 4px;
+          background: rgb(255, 255, 255);
+          color: rgb(143, 143, 143);
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+          padding: 10px;
+          width: 100%;
+        }
+        i {
+          margin-left: -25px;
+        }
+      }
+      .list-nav {
+        display: none;
+      }
+      .login-person {
+        display: none;
+      }
+
+      .nav-bottom {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        width: 100%;
+        background: #fff;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+
+        ul {
+          display: flex;
+          width: 100%;
+          gap: 10px;
+          padding: 0;
+          margin: 0;
+          li {
+            list-style: none;
+
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgb(65, 65, 65);
+            font-family: Rubik;
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            a {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              /* Mob/Text/XS */
+              color: rgb(65, 65, 65);
+              font-family: Rubik;
+              font-size: 8px;
+              font-weight: 400;
+              line-height: 150%;
+              letter-spacing: 0%;
+              text-align: center;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
