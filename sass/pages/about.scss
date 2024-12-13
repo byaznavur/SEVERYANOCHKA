@@ -1,0 +1,106 @@
+.about {
+  padding-top: 100px;
+  .about-herro {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    .about-herro-info {
+      width: 50%;
+      h3 {
+        /* Desc/Header/XL */
+        color: rgb(65, 65, 65);
+        font-family: Rubik;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      p {
+        /* Desc / Text-Bold / L */
+        color: rgb(255, 102, 51);
+        font-family: Rubik;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+    .about-herro-img {
+      background-image: url("../../assets/images/about/about-herro-bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 50%;
+      height: 400px;
+      position: relative;
+
+      img {
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
+      }
+    }
+  }
+}
+
+.about-info-cards {
+  margin: 100px 0;
+  .cards-info {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+
+    .card-info {
+      width: 33%;
+
+      p {
+        /* Mob/Text/L */
+        color: rgb(65, 65, 65);
+        font-family: Rubik;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      h3 {
+        /* Desc / Text-Bold / L */
+        color: rgb(65, 65, 65);
+        font-family: Rubik;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.message-thank {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 100px;
+
+  p {
+    border-radius: 16px;
+    background: rgb(229, 255, 222);
+    padding: 30px 40px;
+    /* Desc / Text-Bold / L */
+    color: rgb(112, 192, 91);
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  img {
+    width: 127px;
+  }
+}

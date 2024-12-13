@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
-  background: rgb(229, 229, 229);
+  background: rgb(251, 248, 236);
 }
 
 .container {
@@ -1115,7 +1115,46 @@ footer .footer a {
        object-fit: contain;
   }
 }
-.articles-cards {
+.location {
+  width: 100%;
+}
+.location .nav-tabs {
+  margin: 30px 0;
+}
+.location iframe {
+  width: 100%;
+}
+
+.articles .articles-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 72px 0;
+}
+.articles .articles-header a {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.articles .articles-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1127,7 +1166,7 @@ footer .footer a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.articles-cards .article-card {
+.articles .articles-cards .article-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1146,7 +1185,7 @@ footer .footer a {
   background-color: #fff;
   padding: 10px;
 }
-.articles-cards .article-card span {
+.articles .articles-cards .article-card span {
   /* Desc/Text/XS */
   color: rgb(143, 143, 143);
   font-family: Rubik;
@@ -1156,7 +1195,7 @@ footer .footer a {
   letter-spacing: 0%;
   text-align: left;
 }
-.articles-cards .article-card h3 {
+.articles .articles-cards .article-card h3 {
   /* Desc/Header/XS */
   color: rgb(65, 65, 65);
   font-family: Rubik;
@@ -1166,10 +1205,10 @@ footer .footer a {
   letter-spacing: 0%;
   text-align: left;
 }
-.articles-cards .article-card img {
+.articles .articles-cards .article-card img {
   width: 100%;
 }
-.articles-cards .article-card p {
+.articles .articles-cards .article-card p {
   /* Desc/Text/S */
   color: rgb(65, 65, 65);
   font-family: Rubik;
@@ -1179,7 +1218,7 @@ footer .footer a {
   letter-spacing: 0%;
   text-align: left;
 }
-.articles-cards .article-card a {
+.articles .articles-cards .article-card a {
   border-radius: 4px;
   /* Main/SecondaryMuted */
   background: rgb(229, 255, 222);
@@ -1195,13 +1234,19 @@ footer .footer a {
   -webkit-transition: 1s;
   transition: 1s;
 }
-.articles-cards .article-card a:hover {
+.articles .articles-cards .article-card a:hover {
   background-color: rgb(112, 192, 91);
   color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-  .articles-cards {
+  .articles .articles-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 60px 0;
+  }
+  .articles .articles-cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1215,7 +1260,7 @@ footer .footer a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .articles-cards .article-card {
+  .articles .articles-cards .article-card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1234,7 +1279,7 @@ footer .footer a {
     background-color: #fff;
     padding: 10px;
   }
-  .articles-cards .article-card span {
+  .articles .articles-cards .article-card span {
     /* Desc/Text/XS */
     color: rgb(143, 143, 143);
     font-family: Rubik;
@@ -1244,7 +1289,7 @@ footer .footer a {
     letter-spacing: 0%;
     text-align: left;
   }
-  .articles-cards .article-card h3 {
+  .articles .articles-cards .article-card h3 {
     /* Desc/Header/XS */
     color: rgb(65, 65, 65);
     font-family: Rubik;
@@ -1254,10 +1299,10 @@ footer .footer a {
     letter-spacing: 0%;
     text-align: left;
   }
-  .articles-cards .article-card img {
+  .articles .articles-cards .article-card img {
     width: 100%;
   }
-  .articles-cards .article-card p {
+  .articles .articles-cards .article-card p {
     /* Desc/Text/S */
     color: rgb(65, 65, 65);
     font-family: Rubik;
@@ -1267,7 +1312,7 @@ footer .footer a {
     letter-spacing: 0%;
     text-align: left;
   }
-  .articles-cards .article-card a {
+  .articles .articles-cards .article-card a {
     border-radius: 4px;
     /* Main/SecondaryMuted */
     background: rgb(229, 255, 222);
@@ -1283,11 +1328,192 @@ footer .footer a {
     -webkit-transition: 1s;
     transition: 1s;
   }
-  .articles-cards .article-card a:hover {
+  .articles .articles-cards .article-card a:hover {
     background-color: rgb(112, 192, 91);
     color: #fff;
   }
 }
+.all-products {
+  margin-top: 100px;
+}
+.all-products h2 {
+  /* Desc/Header/M */
+  color: rgb(65, 65, 65);
+  font-family: Rubik;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.all-products .all-products-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .all-products {
+    margin-top: 50px;
+  }
+  .all-products h2 {
+    /* Desc/Header/M */
+    color: rgb(65, 65, 65);
+    font-family: Rubik;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .all-products .all-products-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1200px)) {
+  .all-products {
+    margin-top: 100px;
+  }
+  .all-products h2 {
+    /* Desc/Header/M */
+    color: rgb(65, 65, 65);
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .all-products .all-products-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+  }
+}
+.about {
+  padding-top: 100px;
+}
+.about .about-herro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about .about-herro .about-herro-info {
+  width: 50%;
+}
+.about .about-herro .about-herro-info h3 {
+  /* Desc/Header/XL */
+  color: rgb(65, 65, 65);
+  font-family: Rubik;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.about .about-herro .about-herro-info p {
+  /* Desc / Text-Bold / L */
+  color: rgb(255, 102, 51);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.about .about-herro .about-herro-img {
+  background-image: url("../../assets/images/about/about-herro-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50%;
+  height: 400px;
+  position: relative;
+}
+.about .about-herro .about-herro-img img {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+}
+
+.about-info-cards {
+  margin: 100px 0;
+}
+.about-info-cards .cards-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+.about-info-cards .cards-info .card-info {
+  width: 33%;
+}
+.about-info-cards .cards-info .card-info p {
+  /* Mob/Text/L */
+  color: rgb(65, 65, 65);
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.about-info-cards .cards-info .card-info h3 {
+  /* Desc / Text-Bold / L */
+  color: rgb(65, 65, 65);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.message-thank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 100px;
+}
+.message-thank p {
+  border-radius: 16px;
+  background: rgb(229, 255, 222);
+  padding: 30px 40px;
+  /* Desc / Text-Bold / L */
+  color: rgb(112, 192, 91);
+  font-family: Rubik;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.message-thank img {
+  width: 127px;
+}
+
 .custom-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

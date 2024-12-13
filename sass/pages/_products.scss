@@ -1,0 +1,66 @@
+.all-products {
+  margin-top: 100px;
+  h2 {
+    /* Desc/Header/M */
+    color: rgb(65, 65, 65);
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  .all-products-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .all-products {
+    margin-top: 50px;
+    h2 {
+      /* Desc/Header/M */
+      color: rgb(65, 65, 65);
+      font-family: Rubik;
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+
+    .all-products-cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and ((min-width: 768px) and (max-width:1200px)) {
+  .all-products {
+    margin-top: 100px;
+    h2 {
+      /* Desc/Header/M */
+      color: rgb(65, 65, 65);
+      font-family: Rubik;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+
+    .all-products-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 50px;
+    }
+  }
+}
