@@ -11,6 +11,10 @@
     text-align: left;
   }
 
+  .active {
+    background-color: red;
+  }
+
   .all-products-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

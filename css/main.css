@@ -1346,6 +1346,9 @@ footer .footer a {
   letter-spacing: 0%;
   text-align: left;
 }
+.all-products .active {
+  background-color: red;
+}
 .all-products .all-products-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
