@@ -2,14 +2,15 @@ const allProductsCards = document.querySelector(".all-products-cards");
 const searchProduct = document.querySelector(".search-product");
 const countProducts = document.querySelector(".count-products");
 const pagination = document.querySelector(".pagination");
-function getAllProducts(el) {
+function getAllProducts({ images, price, id, name, description }) {
+  let check = cart.find((el) => el.id === id);
   return `<div class="card">
 
-    <img src=${el.images[1]} alt="" />
+    <img src="${images[0]}" alt="" />
 
     <div class="card-price">
       <div class="cridit-card">
-        <h2>${el.price} ₽</h2>
+        <h2>${price} ₽</h2>
         <span>С картой</span>
       </div>
       <div class="cash-card">
@@ -18,9 +19,9 @@ function getAllProducts(el) {
       </div>
     </div>
 
-    <h2>${el.name}</h2>
+    <h2>${id}.${name}</h2>
 
-    <p>${el.description.slice(0, 35)}...</p>
+    <p>${description.slice(0, 35)}...</p>
     <div class="cards-star">
       <i class="bx bx-star"></i>
       <i class="bx bx-star"></i>
@@ -29,7 +30,9 @@ function getAllProducts(el) {
       <i class="bx bx-star"></i>
     </div>
 
-    <button class="add-button">В корзину</button>
+    <button onClick = "addToCart(${id})" class="${
+    check ? "added-button" : "add-button"
+  }">В корзину</button>
   </div>`;
 }
 let search = "";
@@ -45,21 +48,21 @@ function getProducts() {
   if (pages > 1) {
     pagination.innerHTML = `<li>
     <button onClick =getPage("-") ${
-      activePage == 1 ? "disabled" : ""
-    }>Previus</button>
+      activePage === 1 ? "disabled" : ""
+    }><i class='bx bx-chevron-left'></i></button>
     </li>`;
 
     for (let i = 1; i <= pages; i++) {
-      pagination.innerHTML += `<li class = "${
-        i === activePage ? "active" : ""
-      }" >
-       <button  onClick = "getPage(${i})">${i}</button>
+      pagination.innerHTML += `<li>
+       <button class = "${
+         i === activePage ? "active" : ""
+       }"   onClick = "getPage(${i})">${i}</button>
        </li>`;
     }
     pagination.innerHTML += `<li>
      <button onClick = getPage("+") ${
-       activePage == pages ? "disabled" : ""
-     }>Next</button>
+       activePage === pages ? "disabled" : ""
+     }><i class='bx bxs-chevron-right'></i></button>
      </li>`;
   } else {
     pagination.innerHTML = "";
@@ -93,4 +96,23 @@ function getPage(page) {
   }
   getProducts();
   console.log(page);
+}
+
+function addToCart(id) {
+  let product = products.find((el) => el.id === id);
+  let check = cart.find((el) => el.id === id);
+  if (check) {
+    cart = cart.map((el) => {
+      if (el.id === id) {
+        el.quantity++;
+      }
+      return el;
+    });
+  } else {
+    product.quantity = 1;
+    cart.push(product);
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  getProducts();
+  getCount();
 }

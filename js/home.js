@@ -44,47 +44,89 @@ const articles = [
   },
 ];
 
-function getDiscountProduct(el) {
-  return `<div class="card">
-                <img src=${el.images[1]} alt="" />
-  
-                <div class="card-price">
-                  <div class="cridit-card">
-                    <h2>${el.price} ₽</h2>
-                    <span>С картой</span>
+function getProducts() {
+  function getDiscountProduct({ name, id, description, images, price }) {
+    let check = cart.find((el) => el.id === id);
+    return `<div class="card">
+                  <img src="${images[1]}" alt="" />
+    
+                  <div class="card-price">
+                    <div class="cridit-card">
+                      <h2>${price} ₽</h2>
+                      <span>С картой</span>
+                    </div>
+                    <div class="cash-card">
+                      <h2>50,50 ₽</h2>
+                      <span>Обычная</span>
+                    </div>
                   </div>
-                  <div class="cash-card">
-                    <h2>50,50 ₽</h2>
-                    <span>Обычная</span>
+    
+                  <h2>${name}</h2>
+    
+                  <p>${description.slice(0, 35)}...</p>
+                  <div class="cards-star">
+                    <i class="bx bx-star"></i>
+                    <i class="bx bx-star"></i>
+                    <i class="bx bx-star"></i>
+                    <i class="bx bx-star"></i>
+                    <i class="bx bx-star"></i>
                   </div>
-                </div>
-  
-                <h2>${el.name}</h2>
-  
-                <p>${el.description.slice(0, 35)}...</p>
-                <div class="cards-star">
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                </div>
-  
-                <button class="add-button">В корзину</button>
-              </div>`;
-}
-
-products.slice(0, 5).map((el) => {
-  if (el.discount > 0) {
-    discountCards.innerHTML += getDiscountProduct(el);
+    
+                  <button  onClick = "addToCart(${id})" class="${
+      check ? "added-button" : "add-button"
+    }">В корзину</button>
+                </div>`;
   }
-});
 
-function getNewProduct(el) {
-  return `<div class="card">
+  products.slice(0, 5).map((el) => {
+    if (el.discount > 0) {
+      discountCards.innerHTML += getDiscountProduct(el);
+    }
+  });
 
+  function getNewProduct(el) {
+    return `<div class="card">
+  
+                    <img src=${el.images[1]} alt="" />
+  
+                    <div class="card-price">
+                      <div class="cridit-card">
+                        <h2>${el.price} ₽</h2>
+                        <span>С картой</span>
+                      </div>
+                      <div class="cash-card">
+                        <h2>50,50 ₽</h2>
+                        <span>Обычная</span>
+                      </div>
+                    </div>
+  
+                    <h2>${el.name}</h2>
+  
+                    <p>${el.description.slice(0, 35)}...</p>
+                    <div class="cards-star">
+                      <i class="bx bx-star"></i>
+                      <i class="bx bx-star"></i>
+                      <i class="bx bx-star"></i>
+                      <i class="bx bx-star"></i>
+                      <i class="bx bx-star"></i>
+                    </div>
+  
+                    <button class="add-button">В корзину</button>
+                  </div>`;
+  }
+
+  let newProduct = products.filter((el) => el.isNew).slice(0, 4);
+  console.log(newProduct);
+
+  newProduct.map((el) => {
+    newProductsCards.innerHTML += getNewProduct(el);
+    console.log(el);
+  });
+
+  function getBeforeProduct(el) {
+    return `<div class="card">
                   <img src=${el.images[1]} alt="" />
-
+    
                   <div class="card-price">
                     <div class="cridit-card">
                       <h2>${el.price} ₽</h2>
@@ -95,9 +137,9 @@ function getNewProduct(el) {
                       <span>Обычная</span>
                     </div>
                   </div>
-
+    
                   <h2>${el.name}</h2>
-
+    
                   <p>${el.description.slice(0, 35)}...</p>
                   <div class="cards-star">
                     <i class="bx bx-star"></i>
@@ -106,52 +148,36 @@ function getNewProduct(el) {
                     <i class="bx bx-star"></i>
                     <i class="bx bx-star"></i>
                   </div>
-
+    
                   <button class="add-button">В корзину</button>
                 </div>`;
+  }
+
+  products.slice(0, 4).map((el) => {
+    beforeProductsCards.innerHTML += getBeforeProduct(el);
+  });
 }
 
-let newProduct = products.filter((el) => el.isNew).slice(0, 4);
-console.log(newProduct);
+getProducts();
 
-newProduct.map((el) => {
-  newProductsCards.innerHTML += getNewProduct(el);
-  console.log(el);
-});
-
-function getBeforeProduct(el) {
-  return `<div class="card">
-                <img src=${el.images[1]} alt="" />
-  
-                <div class="card-price">
-                  <div class="cridit-card">
-                    <h2>${el.price} ₽</h2>
-                    <span>С картой</span>
-                  </div>
-                  <div class="cash-card">
-                    <h2>50,50 ₽</h2>
-                    <span>Обычная</span>
-                  </div>
-                </div>
-  
-                <h2>${el.name}</h2>
-  
-                <p>${el.description.slice(0, 35)}...</p>
-                <div class="cards-star">
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                </div>
-  
-                <button class="add-button">В корзину</button>
-              </div>`;
+function addToCart(id) {
+  let product = products.find((el) => el.id === id);
+  let check = cart.find((el) => el.id === id);
+  if (check) {
+    cart = cart.map((el) => {
+      if (el.id === id) {
+        el.quantity++;
+      }
+      return el;
+    });
+  } else {
+    product.quantity = 1;
+    cart.push(product);
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  getProducts();
+  getCount();
 }
-
-products.slice(0, 4).map((el) => {
-  beforeProductsCards.innerHTML += getBeforeProduct(el);
-});
 
 function getAdvert(el) {
   return `<div class= "advert-card">

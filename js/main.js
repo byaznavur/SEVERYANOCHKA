@@ -1,6 +1,6 @@
 const darkBtn = document.querySelector(".dark-btn");
 const body = document.querySelector("body");
-
+const cartCount = document.querySelector(".cart");
 const modalOpenBtn = document.querySelector(".modal-open-btn");
 const modalCloseBtn = document.querySelector(".modal-close-btn");
 const modalBody = document.querySelector(".modal-body");
@@ -30,3 +30,10 @@ window.addEventListener("click", (e) => {
 });
 
 modalOpenBtn.addEventListener("click", openModal);
+let jsonCart = localStorage.getItem("cart");
+let cart = JSON.parse(jsonCart) || [];
+function getCount() {
+  cartCount.textContent = cart.length;
+}
+
+getCount();

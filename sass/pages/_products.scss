@@ -10,9 +10,46 @@
     letter-spacing: 0%;
     text-align: left;
   }
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  .active {
-    background-color: red;
+    input {
+      padding: 10px 20px;
+      box-sizing: border-box;
+      border: 1px solid rgb(112, 192, 91);
+      border-radius: 4px;
+      background: rgb(255, 255, 255);
+      color: rgb(143, 143, 143);
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+    li {
+      list-style: none;
+      button {
+        width: 30px;
+        height: 30px;
+        background-color: rgb(112, 192, 91);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+      }
+      .active {
+        background-color: #fff;
+        color: rgb(112, 192, 91);
+      }
+    }
   }
 
   .all-products-cards {
@@ -36,7 +73,10 @@
       letter-spacing: 0%;
       text-align: left;
     }
-
+    .product-header {
+      flex-direction: column;
+      margin-top: 100px;
+    }
     .all-products-cards {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
